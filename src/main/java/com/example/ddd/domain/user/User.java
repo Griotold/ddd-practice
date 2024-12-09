@@ -39,6 +39,21 @@ public class User {
         return user;
     }
 
+    // TODO: 객체 수정 시 Domain 에 정해진 규칙을 적용하여 수정하는 방법
+    public void update(String name, String email, String phoneNumber) {
+        update(name, email);
+        transferPhoneNumberFormat(phoneNumber);
+    }
+
+    public void update(String name, String email) {
+        this.name = name;
+        this.email = email;
+    }
+
+    public void changeToManufacture() {
+        this.isManufacture = true;
+    }
+
     private void transferPhoneNumberFormat(String phoneNumber) {
         this.phoneNumber = phoneNumber.replace(PHONE_NUMBER_TRANSFER_TARGET, "");
     }
