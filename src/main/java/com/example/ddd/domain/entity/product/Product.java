@@ -40,6 +40,9 @@ public class Product {
         return this.productDetail.getImages();
     }
 
+    public Long getRetailPrice() {return this.productDetail.getRetailPrice();}
+    public Long getSupplyPrice() {return this.productDetail.getSupplyPrice();}
+
     public void updateManufacture(String username) {
         this.manufacturedBy = username;
     }
