@@ -1,4 +1,4 @@
-package com.example.ddd.domain.user;
+package com.example.ddd.domain.entity.user;
 
 import jakarta.persistence.*;
 import lombok.*;

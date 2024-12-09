@@ -1,4 +1,4 @@
-package com.example.ddd.domain.product;
+package com.example.ddd.domain.entity.product;
 
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
