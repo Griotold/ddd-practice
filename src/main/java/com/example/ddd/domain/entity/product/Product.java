@@ -40,7 +40,7 @@ public class Product {
         return this.productDetail.getImages();
     }
 
-    public void updateMenufacture(String username) {
+    public void updateManufacture(String username) {
         this.manufacturedBy = username;
     }
 }
