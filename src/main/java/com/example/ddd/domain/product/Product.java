@@ -3,6 +3,8 @@ package com.example.ddd.domain.product;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "product")
 @Getter
@@ -27,4 +29,18 @@ public class Product {
     private AuditingDate dateInfo;
 
     private String manufacturedBy;
+
+    public static Product create(String name) {
+        return Product.builder().name(name).build();
+    }
+
+    // TODO: 하위 Entitiy 의 depth 가 길고, 자주 사용하는 기능일 경우,
+    // .get().get().get() 형태를 줄이기 위한 함수도 제공할 수 있습니다.
+    public List<ProductImage> getImages() {
+        return this.productDetail.getImages();
+    }
+
+    public void updateMenufacture(String username) {
+        this.manufacturedBy = username;
+    }
 }
